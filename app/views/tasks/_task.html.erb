@@ -1,0 +1,7 @@
+<div id = "task_<%=task.id %>">
+	<%= task.content %> 
+	<%=task.completed %> 
+	<%= link_to 'delete', task, :method => :delete, :remote => true, :class => 'delete-task' %>
+	<%= link_to 'done', task_done_path(task), :method => :patch ,:remote => true, :class => 'done-task'  %>
+	<%= link_to 'edit', edit_task_path(task), :remote => true, :class => 'edit-task' %>
+</div>

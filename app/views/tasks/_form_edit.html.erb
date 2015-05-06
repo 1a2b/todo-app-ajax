@@ -1,0 +1,9 @@
+<div  class="edit_task_<%= @task.id %>_form">
+<%= form_for @task, remote: true do |f|%>
+	<%= f.label :content %>
+	<%= f.text_field :content %>
+	<%= f.label :completed %>
+	<%= f.check_box :completed %>
+	<%= f.submit %>
+<%end%>
+</div>

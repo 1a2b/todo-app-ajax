@@ -1,0 +1,16 @@
+<% if signed_in? %>
+
+	<div class="form-new-list">
+		<b>New List</b>
+		<%= render partial: "form_new", object: @list %>
+	</div>
+	<div class="lists">
+		<ul id = "all_lists">
+			<% @lists.each do |list| %>
+				<%= render partial: '/lists/list', :locals => {:list => list,  :object => @task}  %>
+			<%end%>
+		</ul>
+
+	</div>
+
+<%end%>
