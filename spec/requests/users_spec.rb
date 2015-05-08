@@ -59,6 +59,4 @@ describe "with a password that's too short" do
  end
 
 
-
-
 end

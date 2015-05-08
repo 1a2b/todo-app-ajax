@@ -1,0 +1,14 @@
+<h1>ALL USERS:</h1>
+
+<lu>
+	<% @users.each   do |user| %>
+		<h3>	
+			<li>
+			User
+			<%= user.name %>
+			<%= user.email %>
+			has <%= user.lists.count %> lists
+			</li>
+		</h3>	
+	<%end%>
+</lu>

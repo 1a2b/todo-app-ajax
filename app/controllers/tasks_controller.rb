@@ -44,7 +44,7 @@ class TasksController < ApplicationController
       end
 
       respond_to do |format|
-        format.html { redirect_to tasks_path}
+        format.html { redirect_to lists_path}
         format.js   {}
       end
   end
@@ -53,8 +53,7 @@ class TasksController < ApplicationController
   
     @task.destroy
     respond_to do |format|
-      format.html { redirect_to tasks_path }
-      format.json { head :no_content }
+      format.html { redirect_to lists_path }
       format.js   {}
     end
   end

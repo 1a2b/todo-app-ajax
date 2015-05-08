@@ -1,6 +1,6 @@
 Todo::Application.routes.draw do
 
-  root 'users#all'
+  root 'users#index'
 
   resources :lists
 

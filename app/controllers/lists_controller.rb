@@ -5,8 +5,7 @@ class ListsController < ApplicationController
     @list = List.new
 
     if signed_in?
-      @user = User.find_by(id: session[:user_id])
-      @lists = @user.lists.where(user_id: session[:user_id])
+      @lists = @current_user.lists.where(user_id: current_user.id)
     end
   end
 
@@ -15,8 +14,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(id: session[:user_id])
-    @list = @user.lists.new(user_id: session[:user_id])
+    @list = current_user.lists.new(user_id:  current_user.id)
     respond_to do |format|
       if @list.save
         format.html { redirect_to lists_path }

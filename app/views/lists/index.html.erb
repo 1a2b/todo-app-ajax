@@ -2,13 +2,11 @@
 
 	<div class="form-new-list">
 		<b>New List</b>
-		<%= render partial: "form_new", object: @list %>
+		<%= render  "form_new" %>
 	</div>
 	<div class="lists">
 		<ul id = "all_lists">
-			<% @lists.each do |list| %>
-				<%= render partial: '/lists/list', :locals => {:list => list,  :object => @task}  %>
-			<%end%>
+				<%= render @lists%>
 		</ul>
 
 	</div>
